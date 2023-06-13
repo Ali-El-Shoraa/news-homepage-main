@@ -1,0 +1,297 @@
+/* start global rules */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html,
+body,
+main {
+  scroll-behavior: smooth;
+  font-family: "Inter", sans-serif;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* end global rules */
+/* start header */
+.header {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.header .container .links {
+  display: flex;
+  align-items: center;
+}
+.header .container nav img[alt="icon-menu"] {
+  display: none;
+}
+@media (max-width: 767px) {
+  .header .container .links {
+    display: none;
+  }
+  .header .container nav img[alt="icon-menu"] {
+    display: block;
+  }
+}
+
+.header .container .links li a {
+  padding: 15px 20px;
+  display: block;
+  color: hsl(247.5deg 4.71% 33.33%);
+  transition: 0.3s;
+}
+.header .container .links li a:hover {
+  color: hsl(3.84deg 94.51% 64.31%);
+}
+/* end header */
+/* start landing */
+.landing .container {
+  display: grid;
+  grid-template-columns: 400px 400px auto;
+  grid-template-areas: "content-a content-a content-b";
+  grid-template-rows: auto auto;
+  gap: 20px;
+}
+@media (max-width: 1150px) {
+  .landing .container {
+    grid-template-columns: 300px 300px auto;
+  }
+}
+@media (max-width: 991px) {
+  .landing .container {
+    grid-template-columns: 200px 200px auto;
+  }
+}
+@media (max-width: 767px) {
+  .landing .container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.landing .container .content-a {
+  grid-area: content-a;
+  grid-template-areas: "content-a content-a content-a";
+}
+.landing .container .content-a img {
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+@media (max-width: 767px) {
+  .landing .container .content-a img[alt="web-3-desktop"] {
+    display: none;
+  }
+}
+@media (min-width: 767px) {
+  .landing .container .content-a img[alt="web-3-mobile"] {
+    display: none;
+  }
+}
+.landing .container .content-a .box {
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 991px) {
+  .landing .container .content-a .box {
+    flex-direction: column;
+  }
+}
+.landing .container .content-a .box h1 {
+  font-size: 55px;
+  width: 300px;
+  font-weight: 900;
+}
+@media (max-width: 991px) {
+  .landing .container .content-a .box h1 {
+    font-size: 30px;
+  }
+}
+@media (max-width: 767px) {
+  .landing .container .content-a .box h1 {
+    width: 250px;
+  }
+}
+.landing .container .content-a .box .text {
+  width: 400px;
+  margin-right: 5px;
+  font-size: 18px;
+  color: hsl(260deg 3.93% 44.9%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media (max-width: 767px) {
+  .landing .container .content-a .box .text {
+    max-width: 100%;
+  }
+}
+.landing .container .content-a .box .text p {
+  line-height: 1.7;
+}
+@media (max-width: 767px) {
+  .landing .container .content-a .box .text p {
+    font-size: 13px;
+  }
+}
+@media (max-width: 991px) {
+  .landing .container .content-a .box p {
+    margin: 15px auto;
+  }
+}
+.landing .container .content-a .box .text button {
+  width: fit-content;
+  text-transform: uppercase;
+  border: none;
+  background-color: hsl(4.91deg 84.13% 62.94%);
+  color: white;
+  padding: 15px 30px;
+  font-size: 15px;
+  letter-spacing: 3px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.landing .container .content-a .box .text button:hover {
+  background-color: hsl(240deg 100% 4.71%);
+}
+.landing .container .content-b {
+  grid-area: content-b;
+  background-color: hsl(240deg 100% 5.1%);
+  padding: 20px;
+}
+.landing .container .content-b h1 {
+  color: hsl(35.83deg 76.8% 64.51%);
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.landing .container .content-b .text:not(:last-child) {
+  padding: 25px 0;
+}
+.landing .container .content-b .text:last-child {
+  padding: 25px 0 0;
+}
+@media (max-width: 991px) {
+  .landing .container .content-b {
+    padding: 15px;
+  }
+  .landing .container .content-b h1 {
+    margin-bottom: 10px;
+  }
+  .landing .container .content-b .text:not(:last-child) {
+    padding: 15px 0;
+  }
+  .landing .container .content-b .text:last-child {
+    padding: 15px 0 0;
+  }
+}
+.landing .container .content-b .text h3 {
+  color: hsl(0deg 0% 99.8%);
+  margin-bottom: 10px;
+  transition: 0.3s;
+}
+.landing .container .content-b .text h3:hover {
+  color: hsl(35.83deg 76.8% 64.51%);
+}
+.landing .container .content-b .text p {
+  color: hsl(237.27deg 19.64% 78.04%);
+  line-height: 1.7;
+}
+/* end landing */
+/* start game */
+.game {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.game .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+.game .container .box {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.game .container .box img {
+  width: 100px;
+  max-width: 100%;
+}
+.game .container .box .text {
+  width: 240px;
+}
+@media (max-width: 767px) {
+  .game .container .box .text {
+    font-size: 13px;
+  }
+}
+.game .container .box .text span {
+  color: hsl(252deg 4.2% 76.67%);
+  font-size: 25px;
+  font-weight: bold;
+  display: block;
+}
+.game .container .box .text h3 {
+  padding: 10px 0;
+}
+.game .container .box .text p {
+  line-height: 1.7;
+}
+/* end game */
+/* start dom js */
+@media (max-width: 767px) {
+  .links-js {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: white;
+    height: 100vh;
+    width: 50%;
+  }
+
+  .links-js li a {
+    display: block;
+    padding: 15px;
+    color: black;
+  }
+  .links-js li a:hover {
+    color: hsl(3.84deg 94.51% 64.31%);
+  }
+}
+/* end dom js */
